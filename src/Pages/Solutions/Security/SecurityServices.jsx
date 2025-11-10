@@ -17,7 +17,7 @@ import {
 } from "react-icons/fa";
 
 const SecurityServices = () => {
-  // -------------------- Data --------------------
+  // All sections data
   const sections = [
     {
       id: "pim",
@@ -144,56 +144,61 @@ const SecurityServices = () => {
     },
   ];
 
-  // -------------------- Render --------------------
   return (
     <div className="security-services">
+      {/* 🌟 Global Hero Section */}
+      <section
+        className="position-relative text-white text-center d-flex align-items-center justify-content-center"
+        style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "35vh",
+        }}
+      >
+        <div
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.5))",
+          }}
+        ></div>
+        <Container className="position-relative z-2 py-3">
+          <FaLock size={50} className="text-danger mb-3" />
+          <h1 className="display-6 fw-bold mb-3 text-uppercase">
+            Enterprise Security Solutions
+          </h1>
+          <p
+            className="lead mx-auto text-light"
+            style={{ maxWidth: "700px", lineHeight: "1.5" }}
+          >
+            Protect, monitor, and optimize your organization’s digital ecosystem
+            with comprehensive cybersecurity services including PIM, SIEM, and VPN
+            management.
+          </p>
+          <Button
+            variant="danger"
+            size="sm"
+            className="mt-2 px-4 py-2 fw-semibold shadow-sm border-0"
+            href="/contact"
+          >
+            Get Started →
+          </Button>
+        </Container>
+      </section>
+
+      {/* 🧱 Sections */}
       {sections.map((sec, i) => (
         <div key={sec.id} id={sec.id}>
-          {/* ---------- Hero ---------- */}
-          <section
-            className="position-relative text-white text-center d-flex align-items-center justify-content-center"
-            style={{
-              backgroundImage: `url(${sec.img})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              minHeight: "30vh",
-            }}
-          >
-            <div
-              className="position-absolute top-0 start-0 w-100 h-100"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.5))",
-              }}
-            ></div>
-            <Container className="position-relative z-2 py-3">
-              <FaLock size={45} className="text-danger mb-2" />
-              <h1 className="h4 fw-bold mb-2 text-uppercase">{sec.title}</h1>
-              <p
-                className="small mx-auto text-light"
-                style={{ maxWidth: "700px", lineHeight: "1.5" }}
-              >
-                {sec.desc}
-              </p>
-              <Button
-                variant="danger"
-                size="sm"
-                className="mt-2 px-4 py-2 fw-semibold shadow-sm border-0"
-                href="/contact"
-              >
-                Get Started →
-              </Button>
-            </Container>
-          </section>
-
-          {/* ---------- Info ---------- */}
+          {/* Info Section */}
           <section className={`py-5 ${i % 2 === 0 ? "bg-light" : ""}`}>
             <Container>
               <Row className="align-items-center">
                 <Col md={6}>
                   <img
                     src={sec.img}
-                    alt={`${sec.title} illustration`}
+                    alt={sec.title}
                     className="img-fluid rounded shadow-lg border border-2 border-danger-subtle"
                   />
                 </Col>
@@ -209,7 +214,7 @@ const SecurityServices = () => {
             </Container>
           </section>
 
-          {/* ---------- Steps ---------- */}
+          {/* Steps */}
           <section className="py-5">
             <Container>
               <h2 className="fw-bold text-center mb-5 text-dark">
@@ -235,7 +240,7 @@ const SecurityServices = () => {
             </Container>
           </section>
 
-          {/* ---------- Benefits ---------- */}
+          {/* Benefits */}
           <section className={`py-5 ${i % 2 === 0 ? "" : "bg-light"}`}>
             <Container>
               <h2 className="fw-bold text-center mb-5 text-dark">
@@ -258,6 +263,40 @@ const SecurityServices = () => {
           </section>
         </div>
       ))}
+
+      {/* 🌍 Global Footer */}
+      <section className="py-5 text-center text-white position-relative">
+        <div
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "brightness(0.3)",
+          }}
+        ></div>
+        <Container className="position-relative z-2">
+          <h2 className="fw-bold display-6 mb-3">
+            Strengthen Your Security Posture
+          </h2>
+          <p
+            className="lead mb-4 mx-auto"
+            style={{ maxWidth: "720px", color: "#e0e0e0" }}
+          >
+            Get tailored enterprise security solutions that protect your
+            infrastructure, detect threats, and ensure compliance across all levels.
+          </p>
+          <Button
+            variant="danger"
+            size="lg"
+            className="px-5 py-3 fw-semibold shadow-lg border-0"
+            href="/contact"
+          >
+            Request a Consultation →
+          </Button>
+        </Container>
+      </section>
     </div>
   );
 };

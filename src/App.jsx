@@ -8,10 +8,9 @@ import Home from "./Component/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Career from "./Pages/Career";
-import Gallery from "./Pages/Gallery";
+// import Gallery from "./Pages/Gallery";
 import Industries from "./Pages/Industries";
-import Resources from "./Pages/Resources";
-import SuccessStories from "./Pages/SuccessStories";
+// import SuccessStories from "./Pages/SuccessStories";
 import Blogs from "./Pages/Blogs";
 import Testimonials from "./Pages/Testimonials";
 import WebDeveloper from "./Pages/ServicesDetails/WebDeveloper";
@@ -33,6 +32,18 @@ import SecuritySerVices from "./Pages/Solutions/Security/SecurityServices"
 import WebSurfingManagement from "./Pages/Solutions/Security/WebSurfingManagement";
 import AntiVirusProtection from "./Pages/Solutions/Security/AntiVirusProtection";
 import DataReplicationAutoLoaders from "./Pages/Solutions/Backup/DataReplicationAutoLoaders";
+import BusinessContinuityPlanning from "./Pages/Solutions/Backup/BusinessContinuityPlanning";
+import AutomatedBackup from "./Pages/Solutions/Backup/AutomatedBackup";
+import AutomatedServerBackup from "./Pages/Solutions/Backup/AutomatedServerBackup";
+import DATDLTTapeLibrary from "./Pages/Solutions/Backup/DATDLTTapeLibrary";
+import DisasterRecoverySolutions from "./Pages/Solutions/Backup/DisasterRecoverySolutions";
+import DataStorageSolutions from "./Pages/Solutions/Backup/DataStorageSolutions";
+import ActiveDirectoryDatabaseServers from "./Pages/Solutions/Infrastructure/ActiveDirectoryDatabaseServers";
+import VirtualisationSolutions from "./Pages/Solutions/Infrastructure/VirtualisationSolutions";
+import HighAvailabilityLoadBalancing from "./Pages/Solutions/Infrastructure/HighAvailabilityLoadBalancing";
+import MessagingCollaborationServers from "./Pages/Solutions/Infrastructure/MessagingCollaborationServers";
+import NetworkPerformanceManagement from "./Pages/Solutions/Infrastructure/NetworkPerformanceManagement";
+
 function App() {
   return (
     <Router>
@@ -50,9 +61,8 @@ function App() {
             <Route path="/services/webdevelopment" element={<WebDeveloper />} />
             <Route path="services/server-management" element={<ServerManagment />} />
             <Route path="/career" element={<Career />} />
-            <Route path="/gallery" element={<Gallery />} />
+            {/* <Route path="/gallery" element={<Gallery />} /> */}
             <Route path="/industries" element={<Industries />} />
-            {/* <Route path="/resources" element={<Resources />} /> */}
             {/* <Route path="/success-stories" element={<SuccessStories />} /> */}
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/testimonials" element={<Testimonials />} />
@@ -70,9 +80,21 @@ function App() {
             <Route path="/solutions/security/intrusion-detection--prevention" element={<IntrusionDetectionPrevention/>} />
             <Route path="/solutions/security/web-surfing-management" element={<WebSurfingManagement/>} />
             <Route path="/solutions/security/pim-siem-vpns" element={<SecuritySerVices />} />
-            {/* <Route path="/solutions/security/anti-virus-protection" element={<AntiVirusProtection />} /> */}
-            {/* <Route path="/solutions/security/data-leakage-prevention" element={<DataLeakagePrevention />} /> */}
-            {/* <Route path="/solutions/Backup/data-replication-auto-loaders" element={<DataReplicationAutoLoaders />} /> */}
+            <Route path="/solutions/security/anti-virus-protection" element={<AntiVirusProtection />} />
+            <Route path="/solutions/security/data-leakage-prevention" element={<DataLeakagePrevention />} />
+            <Route path="/solutions/Backup/data-replication-auto-loaders" element={<DataReplicationAutoLoaders />} />
+            <Route path="/solutions/Backup/business-continuity-planning" element={<BusinessContinuityPlanning />} />
+            <Route path="/solutions/Backup/automated-desktoplaptop-backup" element={<AutomatedBackup />} />
+            <Route path="/solutions/Backup/automated-server-backup" element={<AutomatedServerBackup />} />
+            <Route path="/solutions/Backup/datdlttape-library" element={<DATDLTTapeLibrary />} />
+            <Route path="/solutions/Backup/disaster-recovery-solutions" element={<DisasterRecoverySolutions />} />
+            <Route path="/solutions/Backup/nassanunified-data-storage-solutions" element={<DataStorageSolutions />} />
+            <Route path="/solutions/infrastructure/active-directory-database-servers" element={<ActiveDirectoryDatabaseServers />} />
+            <Route path="/solutions/infrastructure/virtualisation-desktopserverapplication" element={<VirtualisationSolutions />} />
+            <Route path="/solutions/infrastructure/high-availability--load-balancing" element={<HighAvailabilityLoadBalancing />} />
+            <Route path="/solutions/infrastructure/messaging--collaboration-servers" element={<MessagingCollaborationServers />} />
+            <Route path="/solutions/infrastructure/network-performance-management" element={<NetworkPerformanceManagement />} />
+
 
           </Routes>
         </div>

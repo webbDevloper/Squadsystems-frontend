@@ -26,7 +26,6 @@ const Header = () => {
     { name: "Solution", href: "/solution" },
     { name: "About", href: "/about" },
     { name: "Industries", href: "/industries" },
-    { name: "Resources", href: "/resources" },
     { name: "Success Stories", href: "/success-stories" },
     { name: "Career", href: "/career" },
     { name: "Contact", href: "/contact" },
@@ -36,7 +35,7 @@ const Header = () => {
     <>
       {/* Top Info Bar */}
       <div
-        style={{ backgroundColor: "#800000", opacity: 0.9 }}
+        style={{ backgroundColor: "#ad2121ff", opacity: 0.9 }}
         className="text-white py-2"
       >
         <div className="container px-4">

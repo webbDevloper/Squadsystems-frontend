@@ -115,9 +115,9 @@ const Industries = () => {
                       <p className="text-sm text-gray-600 italic">{industry.caseStudy}</p>
                     </div>
 
-                    <button className="px-6 py-2 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors">
+                    {/* <button className="px-6 py-2 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors">
                       Learn More →
-                    </button>
+                    </button> */}
                   </div>
 
                   <div className={isEven ? "" : "lg:col-start-1 lg:row-start-1"}>
