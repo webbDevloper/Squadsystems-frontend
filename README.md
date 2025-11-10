@@ -4,6 +4,6 @@ This is the frontend of the application built using modern web development techn
 
 ## 🚀 Tech Stack
 
-- **React.js** / **Vite** (or CRA)  
+- **React.js** / **Vite** 
 - **HTML5 / CSS3 / JavaScript**
-- **Bootstrap /** (if used)
+- **Bootstrap /** 
